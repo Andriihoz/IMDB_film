@@ -1,8 +1,14 @@
 import pandas as pd
+import matplotlib.pyplot as plt
+
 
 df = pd.read_csv('IMDB-Movie-Data.csv')
 
-df.info()
 #місце для твого коду
-score = df['Reating score'].mean()
-print('score')
+
+
+df.plot(x = 'Rating',y = 'Votes',kind ='hist')
+plt.xlabel('Оцінки')
+plt.ylabel('Кількість фільмів')
+plt.title('Гістограма оцінок фільмів на IMDb')
+plt.show()
